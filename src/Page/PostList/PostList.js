@@ -29,8 +29,7 @@ function PostList() {
                         <Link to={`/posts/${post.id}`}>
                             {post.title}
                         </Link>
-                        <button onClick={} >Delete</button>
-                        <button >Change</button>
+
                     </li>
 
                 )}

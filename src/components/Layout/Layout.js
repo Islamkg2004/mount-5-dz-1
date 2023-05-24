@@ -19,7 +19,7 @@ function Layout() {
                     </li>
                     <li>
                         <NavLink to={'/post-form'} >
-                            Post-form
+                            Создание Поста
                         </NavLink>
                     </li>
                 </ul>
