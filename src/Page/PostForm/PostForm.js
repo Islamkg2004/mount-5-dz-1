@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import {useNavigate} from "react-router-dom";
+
 import axios from 'axios';
 
 const PostForm = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
-
+    const  navigate = useNavigate()
     const handleTitleChange = (event) => {
         setTitle(event.target.value);
     };
@@ -18,9 +20,7 @@ const PostForm = () => {
         const newPost = { title, body };
         axios
             .post('https://jsonplaceholder.typicode.com/posts', newPost)
-            .then((response) => {
-                console.log('Новый пост создан:', response.data);
-            })
+            .then(resp => navigate('/post'))
             .catch((error) => {
                 console.error('Ошибка при создании поста:', error);
             });

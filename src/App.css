@@ -13,3 +13,11 @@ li{
 .active{
   color: aqua;
 }
+.pagination {
+  display: flex;
+
+}
+.pagination button {
+  margin-right: 15px;
+  margin-left: 15px;
+}
